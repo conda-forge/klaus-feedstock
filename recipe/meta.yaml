@@ -1,5 +1,5 @@
 {% set name = "klaus" %}
-{% set version = "1.5.2" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/klaus-{{ version }}.tar.gz
-  sha256: 2013caa8549a087ca5a6a1857a7a19e4db402282347be583742d60e8eb56817b
+  sha256: 8829af0e8a035fe6d8d4c19d3027a829b91ce0b9923ae6efb2acb884bbcdebe0
 
 build:
+  noarch: python
+  entry_points:
+    - klaus=klaus.cli:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   host:
@@ -24,7 +27,6 @@ requirements:
     - humanize
     - pygments
     - python
-    - six
     - werkzeug >=0.15.0
 
 test:
