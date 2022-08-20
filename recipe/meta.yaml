@@ -19,14 +19,14 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.5
   run:
     - dulwich >=0.19.3
     - flask
     - httpauth
     - humanize
     - pygments
-    - python
+    - python >=3.5
     - werkzeug >=0.15.0
 
 test:
