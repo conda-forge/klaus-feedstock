@@ -1,5 +1,5 @@
 {% set name = "klaus" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/klaus-{{ version }}.tar.gz
-  sha256: 8829af0e8a035fe6d8d4c19d3027a829b91ce0b9923ae6efb2acb884bbcdebe0
+  sha256: efb8659fcc8d9973859145bd9a860623be72c27dfb931c365b82e7215fe54abb
 
 build:
   noarch: python
