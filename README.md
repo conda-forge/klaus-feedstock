@@ -1,11 +1,11 @@
-About klaus
-===========
+About klaus-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/klaus-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/jonashaag/klaus
 
 Package license: ISC
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/klaus-feedstock/blob/main/LICENSE.txt)
 
 Summary: The first Git web viewer that Just Works™.
 
