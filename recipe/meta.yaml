@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/klaus-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/klaus-{{ version }}.tar.gz
   sha256: f42afac225ff3c0b7a8356c627703040c7d8b822c65e5be7796c5a4a4ba0daf0
 
 build:
@@ -14,19 +14,19 @@ build:
   entry_points:
     - klaus=klaus.cli:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python {{ python_min }}
   run:
     - dulwich >=0.19.3
     - flask
     - httpauth
     - humanize
     - pygments
-    - python >=3.5
+    - python >={{ python_min }}
     - werkzeug >=0.15.0
 
 test:
@@ -37,6 +37,7 @@ test:
     - klaus --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/jonashaag/klaus
